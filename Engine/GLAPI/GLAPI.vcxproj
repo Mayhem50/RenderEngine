@@ -151,22 +151,30 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CubeMap.cpp" />
+    <ClCompile Include="DataFormat.cpp" />
     <ClCompile Include="FrameBufferObject.cpp" />
+    <ClCompile Include="GlObject.cpp" />
     <ClCompile Include="ShaderFrameWork.cpp" />
     <ClCompile Include="ShaderPipeline.cpp" />
     <ClCompile Include="ShaderProgram.cpp" />
     <ClCompile Include="ShaderTools.cpp" />
+    <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TextureFactory.cpp" />
     <ClCompile Include="UniformBuffer.cpp" />
     <ClCompile Include="Viewport.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CubeMap.h" />
     <ClInclude Include="FrameBufferObject.h" />
+    <ClInclude Include="GlObject.h" />
+    <ClInclude Include="DataFormat.h" />
     <ClInclude Include="ShaderFrameWork.h" />
     <ClInclude Include="ShaderPipeline.h" />
     <ClInclude Include="ShaderProgram.h" />
     <ClInclude Include="ShadersManager.h" />
     <ClInclude Include="ShaderTools.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="TextureFactory.h" />
     <ClInclude Include="UniformBuffer.h" />
     <ClInclude Include="Viewport.h" />
   </ItemGroup>

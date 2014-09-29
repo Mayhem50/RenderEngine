@@ -2,29 +2,27 @@
 
 #include "Foundation.h"
 
-namespace Good
+
+template <typename T>
+class GOOD_DLL Singleton
 {
-	template <typename T>
-	class GOOD_DLL Singleton
+public:
+	template <typename... Arguments>
+	static T* getInstancePtr(Arguments... args)
 	{
-	public:
-		template <typename... Arguments>
-		static T* getInstancePtr(Arguments... args)
-		{
-			if (_instance == nullptr)
-				_instance = new T(args...);
+		if (_instance == nullptr)
+			_instance = new T(args...);
 
-			return _instance;
-		}
+		return _instance;
+	}
 
-	protected:
-		Singleton(){}
-		Singleton(const Singleton&){}
-		Singleton& operator=(const Singleton&){ return *this; }
+protected:
+	Singleton(){}
+	Singleton(const Singleton&){}
+	Singleton& operator=(const Singleton&){ return *this; }
 
-		static T* _instance;
-	};
+	static T* _instance;
+};
 
-	template <typename T>
-	T* Singleton<T>::_instance = nullptr;
-}
+template <typename T>
+T* Singleton<T>::_instance = nullptr;
